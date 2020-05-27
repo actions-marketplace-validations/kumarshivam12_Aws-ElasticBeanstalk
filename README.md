@@ -11,7 +11,32 @@ The action has two workflows combined.
 User Guide, Please Check out [demo](https://github.com/kumarshivam12/flaskapp)
 
 ```YAML
-- name: Elastic Beanstalk Deployment
-  uses: kumarshivam12/Aws-ElasticBeanstalk@v1.0
+name: Elastic Beanstalk Deployment
+on:
+  push:
+    branches:
+    - master
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout source code
+      uses: actions/checkout@v1
+      
+    - name: Elastic Beanstalk Deployment
+      uses: kumarshivam12/Aws-ElasticBeanstalk@v1.3
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+        EB-BUCKET-NAME: 
+          description : Enter The Name of the S3 Bucket
+        APPLICATION-NAME: 
+          description : Enter the name of the Elastic BeanStalk Application
+        EB-ENV-NAME: 
+          description : Name of the Elastic beanstalk Environment
+        AWS-REGION: 
+          description : Enter the Region
 
 ```
