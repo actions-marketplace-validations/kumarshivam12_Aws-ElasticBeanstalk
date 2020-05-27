@@ -9,12 +9,20 @@ branding:
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-env:
-  EB-BUCKET-NAME: ""
-  APPLICATION-NAME: ""
-  EB-ENV-NAME: ""
+inputs:
+  EB-BUCKET-NAME: 
+    description : Enter The Name of the S3 Bucket
+    required : true
+  APPLICATION-NAME: 
+    description : Enter the name of the Elastic BeanStalk Application
+    required : true
+  EB-ENV-NAME: 
+    description : Name of the Elastic beanstalk Environment
+    required : true
   DEPLOY-PACKAGE-NAME: "Application-${{ github.sha }}.zip"
-  AWS-REGION: "us-east-1"
+  AWS-REGION: 
+    description : Enter the Region
+    required : true
 on:
   push:
     branches: [ master ]
