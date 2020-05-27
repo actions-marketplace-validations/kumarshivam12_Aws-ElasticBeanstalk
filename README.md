@@ -4,6 +4,7 @@ The action has two workflows combined.
 
 **Pre-requisite**
 * An AWS user with privileged access to S3 and Elastic Beanstalk
+*  **Generate and Save Your AWS access-key id as "AWS_ACCESS_KEY" and Secret-Key as "AWS_SECRET_KEY" in your Github Repo Secrets. Do not change the name !!**
 * S3 Bucket need not be public
 
 
