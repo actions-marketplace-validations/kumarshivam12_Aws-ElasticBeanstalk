@@ -1,8 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Elastic Beanstalk Deployment
-description: Create Deployment Pipeline
-author: Shivam <findme@kshivam.com>
+name: 'Elastic Beanstalk Deployment'
+description: 'Create Deployment Pipeline'
+author: 'Shivam <findme@kshivam.com>'
 branding:
   icon: 'check-circle'  
   color: 'purple'
@@ -11,17 +11,17 @@ branding:
 # events but only for the master branch
 inputs:
   EB-BUCKET-NAME: 
-    description : Enter The Name of the S3 Bucket
+    description : 'Enter The Name of the S3 Bucket'
     required : true
   APPLICATION-NAME: 
-    description : Enter the name of the Elastic BeanStalk Application
+    description : 'Enter the name of the Elastic BeanStalk Application'
     required : true
   EB-ENV-NAME: 
-    description : Name of the Elastic beanstalk Environment
+    description : 'Name of the Elastic beanstalk Environment'
     required : true
   DEPLOY-PACKAGE-NAME: "Application-${{ github.sha }}.zip"
   AWS-REGION: 
-    description : Enter the Region
+    description : 'Enter the Region'
     required : true
 on:
   push:
