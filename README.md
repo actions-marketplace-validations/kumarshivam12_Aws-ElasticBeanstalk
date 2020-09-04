@@ -7,6 +7,8 @@ The action has two workflows combined.
 *  **Generate and Save Your AWS access-key id as "AWS_ACCESS_KEY" and Secret-Key as "AWS_SECRET_KEY" in your Github Repo Secrets. Do not change the name !!**
 * S3 Bucket need not be public
 
+**Adding Container Support**
+* Action might not work for few days.........................
 
 User Guide, Please Check out [demo](https://github.com/kumarshivam12/flaskapp)
 
